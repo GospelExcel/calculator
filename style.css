@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#whole_calculator {
+    min-height: 75vh;
+    min-width: 55vh;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    border-style: solid;
+    min-height: 20vh;
+}
+
+#keypad {
+    flex: 1;
+    display: flex;
+}
+
+.keypad_digit {
+    flex: 1;
+    border-style: solid;
+}
