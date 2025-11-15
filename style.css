@@ -19,12 +19,16 @@ body {
     min-height: 20vh;
 }
 
-#keypad {
-    flex: 1;
+#buttons {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.keypad_digit {
+#keypad {
     flex: 1;
+}
+
+.calc_button {
+    flex-basis: 33.3333%;
     border-style: solid;
 }
