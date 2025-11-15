@@ -4,12 +4,17 @@ let operation;
 
 let keypad = document.getElementById('keypad')
 
-for(let i = 0; i < 10; i++) {
-    const newButton = document.createElement('button')
-    newButton.textContent = `${i}`
-    newButton.classList.add('keypad_digit')
-    keypad.appendChild(newButton)
+for(let i = 1; i < 10; i++) {
+    const newButton = document.createElement('button');
+    newButton.textContent = `${i}`;
+    newButton.classList.add('keypad_digit');
+    keypad.appendChild(newButton);
 }
+
+const zButton = document.createElement('button');
+zButton.textContent = '0';
+zButton.classList.add('keypad_digit');
+keypad.appendChild(zButton);
 
 function add (num1, num2) {
     return num1 + num2;

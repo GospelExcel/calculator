@@ -11,6 +11,7 @@ body {
     border-style: solid;
     display: flex;
     flex-direction: column;
+    border-radius: 3%;
 }
 
 #display {
