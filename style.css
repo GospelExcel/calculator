@@ -15,20 +15,33 @@ body {
 }
 
 #display {
-    border-style: solid;
     min-height: 20vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 50px;
+    font-size: xx-large;
 }
 
 #buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
 #keypad {
-    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .calc_button {
     flex-basis: 33.3333%;
     border-style: solid;
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }

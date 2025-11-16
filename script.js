@@ -2,19 +2,21 @@ let num1;
 let num2;
 let operation;
 
-let buttons = document.getElementById('buttons')
+let keypad = document.getElementById('keypad');
+let display = document.getElementById('display');
 
-for(let i = 1; i < 10; i++) {
+for(let i = 0; i < 10; i++) {
     const newButton = document.createElement('button');
     newButton.textContent = `${i}`;
     newButton.classList.add('calc_button');
-    buttons.appendChild(newButton);
+    newButton.addEventListener('click', (e) => appendToDisplay(newButton.textContent));
+    keypad.appendChild(newButton);
 }
 
-// const zButton = document.createElement('button');
-// zButton.textContent = '0';
-// zButton.classList.add('keypad_digit');
-// keypad.appendChild(zButton);
+let clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', (e) => {
+    display.textContent = '';
+});
 
 function add (num1, num2) {
     return num1 + num2;
@@ -34,4 +36,10 @@ function divide (num1, num2) {
 
 function operate (operator, num1, num2) {
     return add(num1, num2)
+}
+
+function appendToDisplay (toAppend) {
+    currDisplay = display.textContent;
+    currDisplay += toAppend;
+    display.textContent = currDisplay
 }
