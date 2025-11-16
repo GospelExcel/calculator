@@ -18,6 +18,14 @@ clearButton.addEventListener('click', (e) => {
     display.textContent = '';
 });
 
+const operatorButtons = document.querySelectorAll('.operator');
+operatorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        console.log("hit")
+        appendToDisplay(button.textContent);
+    });
+});
+
 function add (num1, num2) {
     return num1 + num2;
 }
