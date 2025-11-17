@@ -68,7 +68,7 @@ function operate (operator) {
         case 'x':
              ans = multiply(num1, num2);
              break;
-        case '/':
+        case '÷':
              ans = divide(num1, num2);
              break;
     }
