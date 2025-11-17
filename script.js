@@ -27,6 +27,7 @@ operatorButtons.forEach(button => {
             operate(operator, num1, num2);
             num2Listener = true;
             appendToDisplay(button.textContent);
+            operator = button.textContent;
         } else {
             num1 = Number(display.textContent);
             operator = button.textContent; 
@@ -85,7 +86,7 @@ function appendToDisplay (toAppend) {
     currDisplay += toAppend;
     display.textContent = currDisplay
 
-    if (!Number.isNaN(toAppend) && num2Listener) {
+    if (!isNaN(toAppend) && num2Listener) {
         num2 = Number(String(num2) + toAppend)
     }
 }
