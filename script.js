@@ -10,6 +10,7 @@ for(let i = 0; i < 10; i++) {
     const newButton = document.createElement('button');
     newButton.textContent = `${i}`;
     newButton.classList.add('calc_button');
+    newButton.classList.add('digit')
     newButton.addEventListener('click', (e) => appendToDisplay(newButton.textContent));
     keypad.appendChild(newButton);
 }
